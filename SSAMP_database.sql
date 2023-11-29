@@ -10,16 +10,13 @@ create database SSAMP_database;
 use SSAMP_database;
 
 create table MembershipPlan
-(
-    ItemID              char(15),
-    ItemDescription     varchar(30),
-    MSRP				decimal(9,2), 
-	primary key (ItemID)
-);
+--(
+    
+--);
 
-insert into Inventory (ItemID, ItemDescription, MSRP)
+insert into MembershipPlan (MembershipPlanID, MembershipFee, PlanDescription, PaymentPlan)
 values
-
+();
 
 create table CustomerMembership
 (
@@ -30,13 +27,9 @@ create table CustomerMembership
 	primary key (RepID)
 );
 
-insert into SalesRep (RepID, RepFName, RepLName, CommPercent)
+insert into CustomerMembership ()
 	values
-	(101,	'Briana',	'Keller',	2),
-	(102,	'Marilyn',	'Drummond',	3),
-	(103,	'Robert',	'Walter',	2.50),
-	(104,	'Sam',	'Osterlin',	1.75),
-	(105,	'Katherine',	'Parker',	3.50);
+	();
 
 create table CustCat
 (
