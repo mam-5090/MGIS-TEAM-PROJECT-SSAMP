@@ -1,9 +1,9 @@
---
--- MySQL Database 
--- MGIS 320 PROJECT PART 3
--- Original code by Madeline Mariano, An Dang, Abby Smith, Swetha Nair,
---      with minor modifications by the instructor
---
+/*
+   MySQL Database 
+   MGIS 320 PROJECT PART 3
+   Original code by Madeline Mariano, An Dang, Abby Smith, Swetha Nair
+   Company: Peloton
+*/
 
 drop database if exists SSAMP_database;
 create database SSAMP_database;
@@ -15,12 +15,12 @@ create table Customer
 (
 	CustomerID            int,
     CustCoursID           int,
-    FirstName             char,
-    LastName              char,
-    CustomerAddress       varchar(),
-    PaymentType           char,
+    FirstName             char(100),
+    LastName              char(100),
+    CustomerAddress       varchar(255),
+    PaymentType           char(100),
     PhoneNumber           int,
-    Email                 varchar(),
+    Email                 varchar(255),
     primary key (CustomerID)
 );
 
@@ -32,8 +32,8 @@ values
 create table MembershipPlan
 (
 	MembershipPlanID     int,
-    MembershipFee        decimal,
-    PlanDescription      varchar(),
+    MembershipFee        decimal(5,5),
+    PlanDescription      varchar(255),
     Monthly              bool,
     primary key (MembershipPlanID)
 );
@@ -46,8 +46,8 @@ values
 create table RentalPlan
 (
 	RentalPlanID    char,
-    PlanDescription varchar(),
-	Cost            decimal,
+    PlanDescription varchar(255),
+	Cost            decimal(6,5),
     primary key (RentalPlanID)
 );
 
@@ -58,8 +58,8 @@ values
 ----- Product Type --------
 create table ProductType
 (
-	ProductTypeID        char,
-    ProductDescription   varchar(),
+	ProductTypeID        char(50),
+    ProductDescription   varchar(255),
     primary key (ProductTypeID)
 );
 
@@ -73,13 +73,13 @@ create table Model
 (
 	ModelID            int,
     ProductTypeID      char,
-    ModelName          varchar(),
-    ModelDescription   varchar(),
+    ModelName          varchar(255),
+    ModelDescription   varchar(255),
     WarrantyLength     int,
-    CurrentCost        decimal,
-    ColorID            char,
+    CurrentCost        decimal(6,5),
+    ColorID            char(20),
     CurrentStock       int,
-    PackageOffered     char,
+    PackageOffered     char(255),
     primary key (ModelID),
     foreign key (ProductTypeID) references ProductType(ProductTypeID)
 );
@@ -93,31 +93,12 @@ create table Course
 (
 	CourseID            int,
     ProductTypeID       char,
-    CourseFocus         varchar(),
-    CourseDescription   varchar(),
+    CourseFocus         varchar(100),
+    CourseDescription   varchar(255),
     Date                date,
     Duration            int,
-    Music               varchar(),
-    BodyActivity        varchar(),
-    primary key (CourseID),
-    foreign key (ProductTypeID) references ProductType(ProductTypeID)
-);
-
-insert into Course (CourseID, ProductTypeID, CourseFocus, CourseDescription, Date, Duration, Music, BodyActivity)
-values
-();
-
------ Course---
-create table Course
-(
-	CourseID            int,
-    ProductTypeID       char,
-    CourseFocus         varchar(),
-    CourseDescription   varchar(),
-    Date                date,
-    Duration            int,
-    Music               varchar(),
-    BodyActivity        varchar(),
+    Music               varchar(100),
+    BodyActivity        varchar(100),
     primary key (CourseID),
     foreign key (ProductTypeID) references ProductType(ProductTypeID)
 );
@@ -132,12 +113,12 @@ create table Shipping
 	ShippingID         int,
     CustomerID         int,
     PurchaseSerialNum  int,
-    ShippingAddress    varchar(),
-    Price              decimal,
-    Weight             decimal,
+    ShippingAddress    varchar(255),
+    Price              decimal(6,5),
+    Weight             decimal(6,5),
     ShippingDate       date,
-    ShippingOption     char,
-    PaymentType        char,
+    ShippingOption     char(100),
+    PaymentType        char(200),
     primary key (ShippingID),
     foreign key (CustomerID) references Customer(CustomerID),
     foreign key (PurchaseSerialNum) references CustomerPurchase(PurchaseSerialNum)
@@ -154,10 +135,10 @@ create table CustomerPurchase
     ModelID               int,
     ShippingID            int,
     CustomerID            int,
-    AmtPaid               decimal,
+    AmtPaid               decimal(6,5),
     Warranty              int,
     DateBought            date,
-    Personalization       varchar(),
+    Personalization       varchar(200),
     primary key (PurchaseSerialNum),
     foreign key (ModelID)    references Model(ModelID),
     foreign key (ShippingID) references Shipping(ShippingID),
@@ -194,7 +175,7 @@ create table CustomerMembership
 (
 	CustomerID         int,
     MembershipPlanID   int,
-    CustomerFee        decimal,
+    CustomerFee        decimal(5,5),
     SmartDevices       bool,
     HealthMetric       int, 
     Ranking            int,
