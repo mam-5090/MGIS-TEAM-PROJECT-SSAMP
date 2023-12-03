@@ -91,7 +91,34 @@ create table ProductType
 
 insert into ProductType (ProductTypeID, ProductDesciption)
 values
-();
+("Stationary Bike",	"Immersive 21.5 inchh HD touchscreen gives you a front-row seat in every class
+Resistance knob for manual control
+In-workout metrics like heart rate, output, cadence, and resistance
+Pair your heart rate monitor or download the Peloton Watch App to track your workouts"),
+("Treadmill", "A comfortable and quiet running belt with 59inch of space"),
+("Rower",	"Smooth and nearly silent: Peloton Row’s advanced electronically controlled resistance allows for each stroke to be smooth and nearly silent."),
+("Dumbells",	"Ergonomically designed pair of cast iron weights featuring natural rubberized coating for a non-slip grip so you can focus on pushing your limits. Depictions of weight measurements may differ based on territory."),
+("Yoga Blocks",	"Set of 2. Our sturdy, EVA foam yoga blocks provide extra lift and balance when reaching for new or challenging poses. With three different height options, find just the right amount of support to enhance your practice."),
+("Altos Cycling Shoes",	"Made with a single hook and loop strap to easily put on and remove, Altos are our most innovative cycling shoes yet. Its single-piece textile jacquard upper eliminates unnecessary seams. Runs true to the size of your everyday shoe. Most suitable for narrow to normal fit. Cleats included."),
+("Heart Rate Monitor",	"Our ANT+ and BLE chest strap is comfortable and connects instantly to track your heart rate every workout."),
+("Cycling Shoes",	"Comfortable indoor cycling shoes with a breathable upper and mesh vent on the base. Features a quick ratchet clip, plus hook and loop straps to adjust for the perfect fit."),
+("Row Mat",	"Take your workouts on and off the mat, all while protecting your floor. Get the custom-made mat for Peloton Row."),
+("Bike Mat",	"Protect your floors with our easy to clean mat made for the Peloton bike."),
+("Resistance Bands",	"Made with high-grade natural rubber latex and premium aluminum handles. A no-slip grip made of nylon cording and rubber effortlessly steps up your training. Set of three bands: light, medium and heavy."),
+("Reversible Workout Mat",	"Take your training to the floor with this premium, reversible mat. One side supports your sweatiest efforts with superior grip, and the other side allows you to flow your way to savasana on a textured surface."),
+("Urbanears Sumpan Earbuds",	"We partnered with Urbanears for comfortable in-ear headphones that stay put."),
+("Glass Water Bottle",	"Quench your thirst with our non-slip 16 oz. glass water bottle, made so you can easily replenish on the go."),
+("Yoga Strap",	"Our adjustable nylon yoga strap gives you extra length and alignment throughout your practice. Use to improve your range of motion, and keep you feeling strong in any stretch, pose or bind."),
+("Replacement TouchScreen",	"Includes a 22 inch HD replacement touchscreen for current Bike owners."),
+("Pedals",	"Push yourself farther with our Delta-compatible clip⁠-⁠in pedals, usable with a variety of cycling shoes."),
+("Bike Starter Set",	"Includes 1 pair of cycling shoes with cleats, 1 set of Light weights, 1 water bottle and a Bike mat."),
+("Tread Starter Set",	"Includes a Peloton x Camelbak® water bottle, a reversible workout mat and 2 sets of dumbbells"),
+("Row Starter", 	"Includes 1 Row Mat, 1 set of dumbbells, 1 reversible workout mat, and 1 Sport Bottle"),
+("Yoga Set",	"Includes a Peloton x Camelbak® water bottle, a Special Edition workout mat, yoga blocks, and a yoga strap."),
+("Guide Starter Set",	"Includes 1 reversible workout mat, 1 water bottle and 2 sets of dumbbells"),
+("Bike Ultimate Set",	"Includes 1 pair of cycling shoes with cleats, 1 set of Light weights, a Bike mat, a reversible workout mat, 3 sets of dumbbells, and a water bottle."),
+("Cleats",	"Cleats attach to your cycling shoes and allow you to clip in to your Peloton Bike."),
+("Replacement Pod Charger",	"The Heart Rate Band Pod Charger magnetically connects to and charges your Peloton Heart Rate Band Pod in or out of the armband strap. Includes USB-C to USB-A converter");
 
 ----- Model --------
 ----- ColorID????---
