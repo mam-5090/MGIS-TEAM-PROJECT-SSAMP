@@ -66,12 +66,17 @@ create table MembershipPlan
 
 insert into MembershipPlan (RentalPlanID, PlanDescription, Cost)
 values
-();
+(90001,	0,	"A collection of free classes. Activity tracking, step-by-step gym programs, live metrics, & more. Classes from home or on the go with your favorite smart devices",	FALSE),
+(90002,	12.99,	"No limits on strength, cardio, Pilates, yoga, outdoor running, and more classes, 3 cardio equipment classes per month: cycling, running, walking, and rowing. Excludes Lanebreak and Scenic content. Activity tracking, step-by-step gym programs, live metrics, & other featuresMotivating music during class, from beloved classics to recent hits",	TRUE),
+(90003,	24,	"No limits on strength, cardio, Pilates, yoga, outdoor running, and more classes. No limit on cardio equipment classes per month: cycling, running, walking, and rowing. Excludes Lanebreak and Scenic content. Activity tracking, step-by-step gym programs, live metrics, & other features. Motivating music during class, from beloved classics to recent hits. Exclusive classes, featuring special guests and more.Ability to use a cadence monitor with any cycling workout to track live metrics",	TRUE),
+(90004,	89,	"Includes App+ Membership, rental Bike or Bike+, and cycling shoes",	TRUE),
+(90005,	44,	"Includes App+ Membership and content exclusively for Peloton equipment",	TRUE),
+(90006,	24,	"Includes App+ Membership and content exclusively for Guide",	TRUE);
 
 ----- RentalPlan Database--------
 create table RentalPlan
 (
-	RentalPlanID    char,
+	RentalPlanID    char(10),
     PlanDescription varchar(255),
 	Cost            decimal(6,5),
     primary key (RentalPlanID)
@@ -79,7 +84,18 @@ create table RentalPlan
 
 insert into RentalPlan (RentalPlanID, PlanDescription, Cost)
 values
-();
+("210001",	"Plus $150 one-time delivery fee
+Cancel anytime, we’ll pick it up for free
+Worry-free warranty for the duration of your rental
+Peloton Rental Membership included ($44/mo value)
+One pair of cycling shoes included ($125 value)
+Option to buy out your Bike at any time",	89.00),
+("210002",	"""Plus $150 one-time delivery fee
+Cancel anytime, we’ll pick it up for free
+Worry-free warranty for the duration of your rental
+Peloton Rental Membership included ($44/mo value)
+One pair of cycling shoes included ($125 value)
+Option to buy out your Bike+ at any time",	119.00);
 
 ----- Product Type --------
 create table ProductType
